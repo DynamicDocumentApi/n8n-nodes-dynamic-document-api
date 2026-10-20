@@ -1,5 +1,5 @@
 /** This package's version, sent in the User-Agent. A test keeps it equal to package.json. */
-export const PACKAGE_VERSION = '0.1.0';
+export const PACKAGE_VERSION = '0.1.1';
 
 /** Value of `X-Dynamic-Document-Api-Source`: renders count as n8n's and get the 25 s connector budget. */
 export const SOURCE = 'n8n';

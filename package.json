@@ -1,6 +1,6 @@
 {
 	"name": "@dynamic-document-api/n8n-nodes-dynamic-document-api",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n nodes for Dynamic Document API: PDFs, images and e-invoices from templates, HTML, URLs and Markdown, PDF tools, batches and webhook triggers.",
 	"license": "MIT",
 	"homepage": "https://dynamicdocumentapi.com/docs/n8n",

@@ -84,16 +84,13 @@ jobs:
       - name: Install dependencies
         run: 'npm ci'
 
+      # Trusted publishing (OIDC) needs npm 11.5.1 or later.
+      - name: Update npm
+        run: 'npm install -g npm@11.6.2'
+
       - name: Release
         # Publishes to npm with a provenance attestation (requires id-token: write above).
-        # Lint and build run automatically as part of the release process.
-        #
-        # Option A (OIDC): leave NPM_TOKEN unset — the token step is skipped and
-        #   npm uses the OIDC exchange instead.
-        # Option B (token): set NPM_TOKEN in repo secrets — it is written to
-        #   .npmrc here before publishing.
-        run: |
-          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          npm run release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # Lint and build run automatically as part of the release process. npm authenticates
+        # through the trusted publisher set up for this repository and workflow on npmjs.com;
+        # no token is stored in the repository.
+        run: 'npm run release'

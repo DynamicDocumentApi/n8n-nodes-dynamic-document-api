@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Published from GitHub Actions through npm trusted publishing (OIDC) instead of a stored token. No changes to the nodes.
+
 ## 0.1.0
 
 - First release: the **Dynamic Document API** node (documents, images, PDF tools, e-invoices, batches, renders, templates, signed links, account) and the **Dynamic Document API Trigger** for webhook events.
