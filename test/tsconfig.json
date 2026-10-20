@@ -1,0 +1,11 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"incremental": false,
+		"lib": ["es2022"]
+	},
+	"include": ["./**/*.ts", "../nodes/**/*.ts", "../credentials/**/*.ts"]
+}

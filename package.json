@@ -1,0 +1,65 @@
+{
+	"name": "@dynamic-document-api/n8n-nodes-dynamic-document-api",
+	"version": "0.1.0",
+	"description": "n8n nodes for Dynamic Document API: PDFs, images and e-invoices from templates, HTML, URLs and Markdown, PDF tools, batches and webhook triggers.",
+	"license": "MIT",
+	"homepage": "https://dynamicdocumentapi.com/docs/n8n",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"dynamic-document-api",
+		"pdf",
+		"pdf-generation",
+		"e-invoice",
+		"zugferd",
+		"xrechnung"
+	],
+	"author": {
+		"name": "Dynamic Document API",
+		"email": "support@dynamicdocumentapi.com",
+		"url": "https://dynamicdocumentapi.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DynamicDocumentApi/n8n-nodes-dynamic-document-api.git"
+	},
+	"bugs": {
+		"url": "https://github.com/DynamicDocumentApi/n8n-nodes-dynamic-document-api/issues"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"typecheck": "tsc --noEmit && tsc -p test/tsconfig.json",
+		"test": "vitest run",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/DynamicDocumentApiApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/DynamicDocumentApi/DynamicDocumentApi.node.js",
+			"dist/nodes/DynamicDocumentApiTrigger/DynamicDocumentApiTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.53.2",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "21.1.1",
+		"typescript": "5.9.2",
+		"vitest": "4.1.11"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

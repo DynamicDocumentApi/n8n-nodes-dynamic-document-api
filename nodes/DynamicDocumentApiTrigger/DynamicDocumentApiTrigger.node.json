@@ -1,0 +1,18 @@
+{
+	"node": "@dynamic-document-api/n8n-nodes-dynamic-document-api.dynamicDocumentApiTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Productivity", "Marketing & Content"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://dynamicdocumentapi.com/docs/n8n#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://dynamicdocumentapi.com/docs/n8n#trigger"
+			}
+		]
+	}
+}
